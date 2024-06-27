@@ -6,8 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MIS PELICULAS</title>
 <style>
-
-.header {
+  .header {
     text-align: center;
     margin-bottom: 20px;
   }
@@ -18,17 +17,20 @@
     text-transform: uppercase;
     background-color: royalblue;
     border: 3px solid black;
+    padding: 10px;
   }
+
   .slideshow-container {
     position: relative;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
     overflow: hidden;
     margin: 0 auto;
   }
 
   .slide {
     position: relative;
-    width: 420px;
+    width: 100%;
     display: none;
   }
 
@@ -51,7 +53,6 @@
     border-radius: 4px;
   }
 
-  /* Estilos para los botones */
   .slideshow-controls {
     text-align: center;
     margin-top: 10px;
@@ -66,6 +67,23 @@
     border-radius: 10px;
     font-size: 20px;
     color: white;
+  }
+
+  @media (max-width: 600px) {
+    .header h1 {
+      font-size: 18px;
+      padding: 8px;
+    }
+
+    .slide .slide-title {
+      font-size: 14px;
+      padding: 3px 6px;
+    }
+
+    .slideshow-controls button {
+      padding: 6px 12px;
+      font-size: 16px;
+    }
   }
 </style>
 </head>
@@ -113,22 +131,26 @@
     </a>
     <div class="slide-title">Y DONDE ESTA EL PILOTO</div>
   </div>
-
-
   <div class="slide">
     <a href="pages/joker.html">
       <img src="covers/joker.jpg">
     </a>
     <div class="slide-title">JOKER</div>
   </div>
-
-
   <div class="slide">
     <a href="pages/superrapidos.html">
       <img src="covers/superrapidos.jpg">
     </a>
     <div class="slide-title">SUPER RAPIDOS</div>
   </div>
+
+  <div class="slide">
+    <a href="pages/uqload.html">
+      <img src="covers/uqload.jpg">
+    </a>
+    <div class="slide-title">UQLOAD</div>
+  </div>
+
 </div>
 
 <div class="slideshow-controls">
@@ -141,19 +163,16 @@
   const slides = document.querySelectorAll('.slide');
   const totalSlides = slides.length;
 
-  // Mostrar la primera imagen al cargar la p�gina
   slides[currentIndex].style.display = 'block';
 
-  // Funci�n para mostrar la siguiente imagen
   function nextSlide() {
     slides[currentIndex].style.display = 'none';
     currentIndex = (currentIndex + 1) % totalSlides;
     slides[currentIndex].style.display = 'block';
   }
 
-  // Funci�n para mostrar la imagen anterior
   function prevSlide() {
-    slides[currentIndex].style.display = 'none'; 
+    slides[currentIndex].style.display = 'none';
     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     slides[currentIndex].style.display = 'block';
   }

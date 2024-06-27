@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="index.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIS PELICULAS</title>
+<style>
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    background-color: royalblue;
+    border: 3px solid black;
+  }
+  .slideshow-container {
+    position: relative;
+    width: 420px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .slide {
+    position: relative;
+    width: 420px;
+    display: none;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .slide .slide-title {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    background-color: gold;
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+
+  /* Estilos para los botones */
+  .slideshow-controls {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .slideshow-controls button {
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 8px 16px;
+    background-color: deeppink;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>MIS PELICULAS</h1>
+</div>
+
+<div class="slideshow-container">
+  <div class="slide">
+    <a href="pages/mohicano.html">
+      <img src="covers/mohicano.jpg">
+    </a>
+    <div class="slide-title">El ULTIMO DE LOS MOHICANOS</div>
+  </div>
+
+  <div class="slide">
+    <a href="pages/3amigos.html">
+      <img src="covers/3amigos.jpg">
+    </a>
+    <div class="slide-title">LOS 3 AMIGOS</div>
+  </div>
+  <div class="slide">
+    <a href="pages/ultimosoldado.html">
+      <img src="covers/ultimosoldado.jpg">
+    </a>
+    <div class="slide-title">EL ULTIMO SOLDADO</div>
+  </div>
+  <div class="slide">
+    <a href="pages/comeback.html">
+      <img src="covers/comeback.jpg">
+    </a>
+    <div class="slide-title">THE COMEBACK</div>
+  </div>
+  <div class="slide">
+    <a href="pages/danza.html">
+      <img src="covers/danza.jpg">
+    </a>
+    <div class="slide-title">DANZA CON LOBOS</div>
+  </div>
+  <div class="slide">
+    <a href="pages/elpiloto.html">
+      <img src="covers/elpiloto.jpg">
+    </a>
+    <div class="slide-title">Y DONDE ESTA EL PILOTO</div>
+  </div>
+
+
+  <div class="slide">
+    <a href="pages/joker.html">
+      <img src="covers/joker.jpg">
+    </a>
+    <div class="slide-title">JOKER</div>
+  </div>
+
+
+  <div class="slide">
+    <a href="pages/superrapidos.html">
+      <img src="covers/superrapidos.jpg">
+    </a>
+    <div class="slide-title">SUPER RAPIDOS</div>
+  </div>
+</div>
+
+<div class="slideshow-controls">
+  <button onclick="prevSlide()">Anterior</button>
+  <button onclick="nextSlide()">Siguiente</button>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  // Mostrar la primera imagen al cargar la p�gina
+  slides[currentIndex].style.display = 'block';
+
+  // Funci�n para mostrar la siguiente imagen
+  function nextSlide() {
+    slides[currentIndex].style.display = 'none';
+    currentIndex = (currentIndex + 1) % totalSlides;
+    slides[currentIndex].style.display = 'block';
+  }
+
+  // Funci�n para mostrar la imagen anterior
+  function prevSlide() {
+    slides[currentIndex].style.display = 'none'; 
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    slides[currentIndex].style.display = 'block';
+  }
+</script> 
+</body>
+</html>

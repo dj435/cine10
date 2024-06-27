@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Editor</title>
+    <style>
+      
+      html {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        
+        #video-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .video-wrapper {
+            width: 100%;
+            margin: 0;
+            border: 1px solid red;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .video-wrapper iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9; 
+            height: auto;
+        }
+
+        .video-wrapper img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 50px;
+            overflow: hidden;
+            opacity: 0.2;
+            z-index: 2;
+        }
+    </style>
+</head> 
+<body>
+
+<div id="video-container">
+    <div class="video-wrapper">
+        <iframe src="https://voe.sx/e/3pwak6u7zsic" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        <img src="https://i.ibb.co/pfQwC1S/blue.jpg" alt="Overlay Image">
+    </div>
+</div> 
+</body>

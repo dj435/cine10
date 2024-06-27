@@ -1,0 +1,54 @@
+ html {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+
+background-image:url(covers/fibra.jpg);
+background-repeat:repeat-y repeat-x;
+
+
+}
+
+ .slideshow-container {
+    position: relative;
+    width: 420px;
+    overflow: hidden;
+    margin: 0 auto;
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .slide {
+    float: left;
+    width: 420px;
+    display: none;
+    border: 2px solid lime;
+    box-sizing: border-box;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Estilos para los botones */
+  .slideshow-controls {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .slideshow-controls button {
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 8px 16px;
+    background-color: blue;
+    border: 3px solid white;
+    border-radius: 4px;
+    font-size: 20px;
+    color: white;
+  }
